@@ -1,7 +1,6 @@
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-<<<<<<< HEAD
 const courses = [{
         id: "js-foundations",
         title: "JavaScript Foundations",
@@ -123,82 +122,6 @@ const assignments = [
     { id: "portfolio-page", title: "Build a personal portfolio page", courseId: "html-css", type: "Project", due: "Self-paced", description: "Create a responsive one-page portfolio with an introduction, skills, projects and contact section." },
     { id: "js-quiz", title: "JavaScript fundamentals quiz", courseId: "js-foundations", type: "Practice", due: "Self-paced", description: "Create a short quiz with at least five questions, score feedback and a restart button." },
     { id: "ui-review", title: "Review an interface you use", courseId: "ui-design", type: "Reflection", due: "Self-paced", description: "Identify three design choices that make an app easy or difficult to use." }
-=======
-const courses = [
-  {
-    id: "js-foundations", title: "JavaScript Foundations", category: "Development", level: "Beginner",
-    creator: "freeCodeCamp.org", creatorLabel: "FCC", duration: "4h 12m", lessons: 8, color: "purple",
-    description: "Build a solid understanding of the JavaScript essentials that power interactive websites.",
-    videoId: "PkZNo7MFNFg", tags: ["JavaScript", "Web development"],
-    curriculum: [
-      ["Getting started with JavaScript", "Learn what JavaScript does and how it fits into a web page.", "PkZNo7MFNFg"],
-      ["Variables and data types", "Understand values, variables, strings, numbers and booleans.", "W6NZfCO5SIk"],
-      ["Functions and scope", "Practice writing reusable functions and understanding scope.", "N8ap4k_1QEQ"],
-      ["Arrays and objects", "Store and work with collections of related data.", "oigfaZ5ApsM"],
-      ["DOM basics", "Select and update elements on a web page.", "y17RuWkWdn8"]
-    ]
-  },
-  {
-    id: "ui-design", title: "UI Design Essentials", category: "Design", level: "Beginner",
-    creator: "DesignCourse", creatorLabel: "DC", duration: "2h 35m", lessons: 6, color: "orange",
-    description: "Learn the visual principles behind interfaces that feel clear, balanced and intuitive.",
-    videoId: "c9Wg6Cb_YlU", tags: ["UI design", "Visual design"],
-    curriculum: [
-      ["Design foundations", "Explore hierarchy, alignment, contrast and visual balance.", "c9Wg6Cb_YlU"],
-      ["Color and typography", "Use color and type to make information easier to scan.", "QrNi9FmdlxY"],
-      ["Spacing and layout", "Create consistent rhythm with grids and spacing.", "j6Ule7GXaRs"]
-    ]
-  },
-  {
-    id: "react-intro", title: "React for Beginners", category: "Development", level: "Beginner",
-    creator: "Programming with Mosh", creatorLabel: "PM", duration: "3h 18m", lessons: 7, color: "blue",
-    description: "Get introduced to components, props, state and the way React builds user interfaces.",
-    videoId: "SqcY0GlETPk", tags: ["React", "JavaScript"],
-    curriculum: [
-      ["What is React?", "Understand why component-based UI development is useful.", "SqcY0GlETPk"],
-      ["Your first component", "Break a user interface into reusable pieces.", "Tn6-PIqc4UM"],
-      ["Props and state", "Pass data to components and manage changing UI state.", "4ORZ1GmjaMc"]
-    ]
-  },
-  {
-    id: "focus-systems", title: "Build Better Study Habits", category: "Productivity", level: "All levels",
-    creator: "Ali Abdaal", creatorLabel: "AA", duration: "1h 45m", lessons: 5, color: "green",
-    description: "Create a sustainable learning routine with realistic goals and focused work sessions.",
-    videoId: "f2O6mQkFiiw", tags: ["Habits", "Productivity"],
-    curriculum: [
-      ["Make learning easier to start", "Reduce friction and set up a small, repeatable study routine.", "f2O6mQkFiiw"],
-      ["Plan a realistic week", "Choose a few priorities instead of an overwhelming list.", "Z9w9yX6g9k4"]
-    ]
-  },
-  {
-    id: "html-css", title: "HTML & CSS Refresher", category: "Development", level: "Beginner",
-    creator: "Kevin Powell", creatorLabel: "KP", duration: "2h 05m", lessons: 6, color: "pink",
-    description: "Revisit semantic HTML, modern CSS, responsive layouts and practical styling patterns.",
-    videoId: "G3e-cpL7ofc", tags: ["HTML", "CSS", "Responsive"],
-    curriculum: [
-      ["Semantic HTML", "Structure pages with meaningful, accessible HTML.", "G3e-cpL7ofc"],
-      ["Modern CSS layouts", "Use Flexbox and Grid to build responsive layouts.", "phWxA89Dy94"],
-      ["Responsive design", "Make layouts work on different screen sizes.", "srvUrASNj0s"]
-    ]
-  },
-  {
-    id: "git-basics", title: "Git & GitHub Basics", category: "Development", level: "Beginner",
-    creator: "The Net Ninja", creatorLabel: "NN", duration: "1h 30m", lessons: 5, color: "yellow",
-    description: "Learn the everyday Git workflow for saving versions and sharing your projects.",
-    videoId: "RGOj5yH7evk", tags: ["Git", "GitHub"],
-    curriculum: [
-      ["Why version control?", "Understand repositories and version history.", "RGOj5yH7evk"],
-      ["Commit your changes", "Use add, commit, status and log.", "USjZcfj8yxE"],
-      ["Push to GitHub", "Publish a repository and share your work.", "iv8rSLsi1xo"]
-    ]
-  }
-];
-
-const assignments = [
-  { id: "portfolio-page", title: "Build a personal portfolio page", courseId: "html-css", type: "Project", due: "Self-paced", description: "Create a responsive one-page portfolio with an introduction, skills, projects and contact section." },
-  { id: "js-quiz", title: "JavaScript fundamentals quiz", courseId: "js-foundations", type: "Practice", due: "Self-paced", description: "Create a short quiz with at least five questions, score feedback and a restart button." },
-  { id: "ui-review", title: "Review an interface you use", courseId: "ui-design", type: "Reflection", due: "Self-paced", description: "Identify three design choices that make an app easy or difficult to use." }
->>>>>>> 1013cc9d07ca65753d5559cbdc6c6b0f29fc326b
 ];
 
 const CONFIG = window.LEARNSPACE_CONFIG || {};
@@ -207,16 +130,6 @@ let supabaseClient = null;
 if (hasSupabaseConfig) supabaseClient = window.supabase.createClient(CONFIG.supabaseUrl, CONFIG.supabaseAnonKey);
 
 const state = {
-<<<<<<< HEAD
-    view: "overview",
-    user: null,
-    profile: null,
-    progress: {},
-    submissions: {},
-    activeCourseId: null,
-    activeLessonIndex: 0,
-    authMode: "login"
-=======
   view: "overview",
   user: null,
   profile: null,
@@ -225,12 +138,10 @@ const state = {
   activeCourseId: null,
   activeLessonIndex: 0,
   authMode: "login"
->>>>>>> 1013cc9d07ca65753d5559cbdc6c6b0f29fc326b
 };
 
 const DEMO_KEY = "learnspace-demo-v1";
 const blankProgress = () => ({ completed: [], lastLesson: 0, enrolled: false });
-<<<<<<< HEAD
 
 function loadDemo() {
     try {
@@ -269,7 +180,7 @@ function enrolledCourses() {
 }
 
 function esc(value) {
-    return String(value ? ? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+    return String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 }
 
 function toast(message) {
@@ -289,57 +200,6 @@ function courseCard(course, options = {}) {
     const percent = courseProgress(course);
     const showProgress = options.progress || p.enrolled;
     return `<article class="course-card">
-=======
-function loadDemo() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(DEMO_KEY) || "{}");
-    state.progress = saved.progress || {};
-    state.submissions = saved.submissions || {};
-    state.profile = saved.profile || { full_name: "Guest learner", email: "Demo mode" };
-  } catch {
-    state.progress = {};
-    state.submissions = {};
-    state.profile = { full_name: "Guest learner", email: "Demo mode" };
-  }
-}
-function saveDemo() {
-  localStorage.setItem(DEMO_KEY, JSON.stringify({
-    progress: state.progress, submissions: state.submissions,
-    profile: state.profile
-  }));
-}
-function progressFor(courseId) {
-  if (!state.progress[courseId]) state.progress[courseId] = blankProgress();
-  return state.progress[courseId];
-}
-function courseProgress(course) {
-  const p = progressFor(course.id);
-  const total = course.curriculum.length;
-  return Math.round((p.completed.length / total) * 100);
-}
-function enrolledCourses() {
-  return courses.filter(c => progressFor(c.id).enrolled);
-}
-function esc(value) {
-  return String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
-}
-function toast(message) {
-  const el = $("#toast");
-  el.textContent = message;
-  el.classList.add("show");
-  clearTimeout(toast.timer);
-  toast.timer = setTimeout(() => el.classList.remove("show"), 2800);
-}
-function initials(name = "Learner") {
-  return name.trim().split(/\s+/).slice(0, 2).map(s => s[0] || "").join("").toUpperCase();
-}
-
-function courseCard(course, options = {}) {
-  const p = progressFor(course.id);
-  const percent = courseProgress(course);
-  const showProgress = options.progress || p.enrolled;
-  return `<article class="course-card">
->>>>>>> 1013cc9d07ca65753d5559cbdc6c6b0f29fc326b
     <button class="course-cover ${course.color}" data-open-course="${course.id}" aria-label="Open ${esc(course.title)}">
       <span class="cover-kicker">${esc(course.category)} · ${esc(course.level)}</span>
       <span class="cover-graphic graphic-${course.color}"><i></i><i></i><i></i></span>
@@ -651,8 +511,5 @@ $("#lesson-modal").addEventListener("click", event => {
   if (event.target === $("#lesson-modal")) $("#lesson-modal").close();
 });
 
-<<<<<<< HEAD
 initAuth();
-=======
-initAuth();
->>>>>>> 1013cc9d07ca65753d5559cbdc6c6b0f29fc326b
+
