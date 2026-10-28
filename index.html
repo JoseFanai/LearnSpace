@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LearnSpace — a calm, organized place to learn new skills.">
+  <meta name="theme-color" content="#101827">
+  <title>LearnSpace — Learn at your pace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="LearnSpace home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>learn<span class="brand-light">space</span></span>
+      </a>
+      <div class="workspace-label">LEARNING SPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">⌂</span> Overview</button>
+        <button class="nav-item" data-view="courses"><span class="nav-icon">▤</span> Explore courses</button>
+        <button class="nav-item" data-view="my-learning"><span class="nav-icon">◷</span> My learning</button>
+        <button class="nav-item" data-view="assignments"><span class="nav-icon">☷</span> Assignments <span class="nav-count" id="assignment-count">2</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-spark">✳</div>
+          <strong>Small steps add up.</strong>
+          <p>Keep showing up. Your future self will thank you.</p>
+        </div>
+        <button class="nav-item" id="settings-button"><span class="nav-icon">⚙</span> Settings</button>
+        <div class="profile-mini">
+          <div class="avatar" id="sidebar-avatar">J</div>
+          <div class="profile-copy"><strong id="sidebar-name">Guest learner</strong><span id="sidebar-email">Demo mode</span></div>
+          <button class="icon-button" id="account-button" aria-label="Account menu">···</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb">Learning space <span>/</span> <strong id="breadcrumb-current">Overview</strong></div>
+        <div class="topbar-actions">
+          <div class="status-pill" id="connection-status"><span class="status-dot"></span> Demo mode</div>
+          <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+          <button class="top-avatar" id="top-avatar" aria-label="Open account">J</button>
+        </div>
+      </header>
+
+      <section class="page-view active" id="view-overview">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL LEARNING SPACE</div>
+            <h1>Make room for <span>what's next.</span></h1>
+            <p class="intro">A little progress every day goes a long way. Ready to learn something new?</p>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+            <div class="art-sun"></div><div class="art-card"><span>✦</span><b>Keep<br>growing</b></div>
+            <div class="art-leaf leaf-one"></div><div class="art-leaf leaf-two"></div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span>Courses in progress</span><span class="stat-icon lavender">▤</span></div>
+            <div class="stat-number" id="stat-courses">2</div>
+            <div class="stat-foot"><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span><span>Keep your momentum</span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Lessons completed</span><span class="stat-icon mint">✓</span></div>
+            <div class="stat-number" id="stat-lessons">6</div>
+            <div class="stat-foot"><span class="positive">↑ One step at a time</span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Learning streak</span><span class="stat-icon peach">♨</span></div>
+            <div class="stat-number">3 <small>days</small></div>
+            <div class="stat-foot"><span>Consistency beats intensity</span></div>
+          </article>
+        </div>
+
+        <div class="section-heading">
+          <div><div class="eyebrow">PICK UP WHERE YOU LEFT OFF</div><h2>Continue learning</h2></div>
+          <button class="text-button" data-go="my-learning">View all <span>↗</span></button>
+        </div>
+        <div class="course-grid" id="continue-grid"></div>
+
+        <div class="section-heading explore-heading">
+          <div><div class="eyebrow">A GOOD PLACE TO START</div><h2>Explore something new</h2></div>
+          <button class="text-button" data-go="courses">Browse courses <span>↗</span></button>
+        </div>
+        <div class="course-grid" id="recommended-grid"></div>
+      </section>
+
+      <section class="page-view" id="view-courses">
+        <div class="page-title-row"><div><div class="eyebrow">FIND YOUR NEXT SKILL</div><h1>Explore courses</h1><p class="intro">Curated lessons from creators worth learning from.</p></div></div>
+        <div class="filters-row">
+          <label class="search-box"><span>⌕</span><input id="course-search" type="search" placeholder="Search courses or topics..." aria-label="Search courses"></label>
+          <select id="category-filter" aria-label="Filter by category"><option value="All">All topics</option><option>Development</option><option>Design</option><option>Productivity</option></select>
+        </div>
+        <div class="course-grid" id="all-courses-grid"></div>
+      </section>
+
+      <section class="page-view" id="view-my-learning">
+        <div class="page-title-row"><div><div class="eyebrow">YOUR JOURNEY</div><h1>My learning</h1><p class="intro">Every lesson completed is progress worth celebrating.</p></div></div>
+        <div class="course-grid" id="my-learning-grid"></div>
+        <div class="empty-state hidden" id="learning-empty"><div class="empty-icon">✳</div><h3>Your learning journey starts here</h3><p>Explore the course library and add a course to get started.</p><button class="primary-button" data-go="courses">Explore courses</button></div>
+      </section>
+
+      <section class="page-view" id="view-assignments">
+        <div class="page-title-row"><div><div class="eyebrow">PUT LEARNING INTO PRACTICE</div><h1>Assignments</h1><p class="intro">Build something with what you've learned.</p></div></div>
+        <div class="assignment-list" id="assignment-list"></div>
+      </section>
+
+      <section class="page-view" id="view-settings">
+        <div class="page-title-row"><div><div class="eyebrow">MAKE IT YOURS</div><h1>Settings</h1><p class="intro">Account and platform configuration.</p></div></div>
+        <div class="settings-card">
+          <h3>Account</h3><p id="account-description">You're exploring LearnSpace in demo mode. Progress is saved only in this browser.</p>
+          <div class="settings-actions"><button class="secondary-button" id="auth-open">Sign in / Create account</button><button class="secondary-button" id="signout-button">Sign out</button></div>
+        </div>
+        <div class="settings-card">
+          <h3>Cloud sync</h3><p>Cloud accounts are not connected until you configure your Supabase project and credentials in <code>config.js</code>, then create the database tables using <code>supabase/schema.sql</code>.</p>
+          <div class="config-state" id="config-state"><span class="status-dot"></span> Checking configuration…</div>
+        </div>
+      </section>
+
+      <section class="page-view" id="view-course-detail">
+        <button class="back-button" id="back-to-courses">← Back to courses</button>
+        <div id="course-detail-content"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="auth-modal">
+    <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Close dialog">×</button></form>
+    <div class="modal-brand"><span class="brand-mark"><span></span><span></span><span></span></span> learn<span class="brand-light">space</span></div>
+    <div class="eyebrow">WELCOME TO YOUR LEARNING SPACE</div>
+    <h2 id="auth-title">Your next chapter starts here.</h2>
+    <p class="modal-description" id="auth-description">Sign in or create an account to keep your learning progress in sync.</p>
+    <div class="auth-tabs"><button class="auth-tab active" id="login-tab" type="button">Sign in</button><button class="auth-tab" id="register-tab" type="button">Create account</button></div>
+    <form id="auth-form">
+      <label class="form-label" id="name-field-label">Your name<input id="auth-name" autocomplete="name" placeholder="e.g. Joseph" /></label>
+      <label class="form-label">Email address<input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com" required /></label>
+      <label class="form-label">Password<input id="auth-password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required /></label>
+      <p class="form-message" id="auth-message" aria-live="polite"></p>
+      <button class="primary-button full-width" type="submit" id="auth-submit">Sign in</button>
+    </form>
+    <p class="modal-footnote" id="auth-mode-note">Demo mode: sign-in is simulated locally and is not secure authentication.</p>
+  </dialog>
+
+  <dialog class="modal lesson-modal" id="lesson-modal">
+    <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Close lesson">×</button></form>
+    <div class="eyebrow">COURSE LESSON</div><h2 id="lesson-title">Lesson title</h2>
+    <p id="lesson-description" class="intro"></p>
+    <div class="video-frame" id="video-frame"></div>
+    <div class="lesson-actions"><span id="lesson-progress-label">Lesson 1</span><button class="primary-button" id="complete-lesson">Mark as completed ✓</button></div>
+    <p class="video-note">Videos are embedded from YouTube. LearnSpace does not host or own these videos.</p>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
