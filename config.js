@@ -7,6 +7,11 @@
   3. Paste them below. NEVER put a service_role/secret key in frontend code.
 */
 window.LEARNSPACE_CONFIG = {
+<<<<<<< HEAD
     supabaseUrl: "https://waztwivxwrqdmsahxend.supabase.co",
     supabaseAnonKey: "sb_publishable_HOA9Td5KimgMSz8YKzkumw_OOxD91iG"
+=======
+  supabaseUrl: "https://waztwivxwrqdmsahxend.supabase.co",
+  supabaseAnonKey: "sb_publishable_HOA9Td5KimgMSz8YKzkumw_OOxD91iG"
+>>>>>>> 1013cc9d07ca65753d5559cbdc6c6b0f29fc326b
 };
