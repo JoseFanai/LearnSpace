@@ -9,7 +9,9 @@
     <title>LearnSpace — Learn at your pace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -26,7 +28,7 @@
                 <button class="nav-item" data-view="courses"><span class="nav-icon">▤</span> Explore courses</button>
                 <button class="nav-item" data-view="my-learning"><span class="nav-icon">◷</span> My learning</button>
                 <button class="nav-item" data-view="assignments"><span class="nav-icon">☷</span> Assignments <span
-            class="nav-count" id="assignment-count">2</span></button>
+                        class="nav-count" id="assignment-count">2</span></button>
             </nav>
             <div class="sidebar-bottom">
                 <div class="help-card">
@@ -37,8 +39,9 @@
                 <button class="nav-item" id="settings-button"><span class="nav-icon">⚙</span> Settings</button>
                 <div class="profile-mini">
                     <div class="avatar" id="sidebar-avatar">J</div>
-                    <div class="profile-copy"><strong id="sidebar-name">Guest learner</strong><span id="sidebar-email">Demo
-              mode</span></div>
+                    <div class="profile-copy"><strong id="sidebar-name">Guest learner</strong><span
+                            id="sidebar-email">Demo
+                            mode</span></div>
                     <button class="icon-button" id="account-button" aria-label="Account menu">···</button>
                 </div>
             </div>
@@ -47,7 +50,8 @@
         <main class="main-content">
             <header class="topbar">
                 <button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open navigation">☰</button>
-                <div class="breadcrumb">Learning space <span>/</span> <strong id="breadcrumb-current">Overview</strong></div>
+                <div class="breadcrumb">Learning space <span>/</span> <strong id="breadcrumb-current">Overview</strong>
+                </div>
                 <div class="topbar-actions">
                     <div class="status-pill" id="connection-status"><span class="status-dot"></span> Demo mode</div>
                     <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
@@ -74,10 +78,12 @@
 
                 <div class="stats-grid">
                     <article class="stat-card">
-                        <div class="stat-top"><span>Courses in progress</span><span class="stat-icon lavender">▤</span></div>
+                        <div class="stat-top"><span>Courses in progress</span><span class="stat-icon lavender">▤</span>
+                        </div>
                         <div class="stat-number" id="stat-courses">2</div>
-                        <div class="stat-foot"><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span><span>Keep your
-                momentum</span></div>
+                        <div class="stat-foot"><span
+                                class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span><span>Keep your
+                                momentum</span></div>
                     </article>
                     <article class="stat-card">
                         <div class="stat-top"><span>Lessons completed</span><span class="stat-icon mint">✓</span></div>
@@ -120,13 +126,13 @@
                 </div>
                 <div class="filters-row">
                     <label class="search-box"><span>⌕</span><input id="course-search" type="search"
-              placeholder="Search courses or topics..." aria-label="Search courses"></label>
+                            placeholder="Search courses or topics..." aria-label="Search courses"></label>
                     <select id="category-filter" aria-label="Filter by category">
-            <option value="All">All topics</option>
-            <option>Development</option>
-            <option>Design</option>
-            <option>Productivity</option>
-          </select>
+                        <option value="All">All topics</option>
+                        <option>Development</option>
+                        <option>Design</option>
+                        <option>Productivity</option>
+                    </select>
                 </div>
                 <div class="course-grid" id="all-courses-grid"></div>
             </section>
@@ -143,7 +149,8 @@
                 <div class="empty-state hidden" id="learning-empty">
                     <div class="empty-icon">✳</div>
                     <h3>Your learning journey starts here</h3>
-                    <p>Explore the course library and add a course to get started.</p><button class="primary-button" data-go="courses">Explore courses</button>
+                    <p>Explore the course library and add a course to get started.</p><button class="primary-button"
+                        data-go="courses">Explore courses</button>
                 </div>
             </section>
 
@@ -168,16 +175,19 @@
                 </div>
                 <div class="settings-card">
                     <h3>Account</h3>
-                    <p id="account-description">You're exploring LearnSpace in demo mode. Progress is saved only in this browser.
+                    <p id="account-description">You're exploring LearnSpace in demo mode. Progress is saved only in this
+                        browser.
                     </p>
                     <div class="settings-actions"><button class="secondary-button" id="auth-open">Sign in / Create
-              account</button><button class="secondary-button" id="signout-button">Sign out</button></div>
+                            account</button><button class="secondary-button" id="signout-button">Sign out</button></div>
                 </div>
                 <div class="settings-card">
                     <h3>Cloud sync</h3>
                     <p>Cloud accounts are not connected until you configure your Supabase project and credentials in
-                        <code>config.js</code>, then create the database tables using <code>supabase/schema.sql</code>.</p>
-                    <div class="config-state" id="config-state"><span class="status-dot"></span> Checking configuration…</div>
+                        <code>config.js</code>, then create the database tables using <code>supabase/schema.sql</code>.
+                    </p>
+                    <div class="config-state" id="config-state"><span class="status-dot"></span> Checking configuration…
+                    </div>
                 </div>
             </section>
 
@@ -193,23 +203,27 @@
     <dialog class="modal" id="auth-modal">
         <form method="dialog" class="modal-close-row"><button class="icon-button" aria-label="Close dialog">×</button>
         </form>
-        <div class="modal-brand"><span class="brand-mark"><span></span><span></span><span></span></span> learn<span class="brand-light">space</span></div>
+        <div class="modal-brand"><span class="brand-mark"><span></span><span></span><span></span></span> learn<span
+                class="brand-light">space</span></div>
         <div class="eyebrow">WELCOME TO YOUR LEARNING SPACE</div>
         <h2 id="auth-title">Your next chapter starts here.</h2>
-        <p class="modal-description" id="auth-description">Sign in or create an account to keep your learning progress in sync.
+        <p class="modal-description" id="auth-description">Sign in or create an account to keep your learning progress
+            in sync.
         </p>
-        <div class="auth-tabs"><button class="auth-tab active" id="login-tab" type="button">Sign in</button><button class="auth-tab" id="register-tab" type="button">Create account</button></div>
+        <div class="auth-tabs"><button class="auth-tab active" id="login-tab" type="button">Sign in</button><button
+                class="auth-tab" id="register-tab" type="button">Create account</button></div>
         <form id="auth-form">
             <label class="form-label" id="name-field-label">Your name<input id="auth-name" autocomplete="name"
-          placeholder="e.g. Joseph" /></label>
+                    placeholder="e.g. Joseph" /></label>
             <label class="form-label">Email address<input id="auth-email" type="email" autocomplete="email"
-          placeholder="you@example.com" required /></label>
+                    placeholder="you@example.com" required /></label>
             <label class="form-label">Password<input id="auth-password" type="password" autocomplete="current-password"
-          minlength="6" placeholder="At least 6 characters" required /></label>
+                    minlength="6" placeholder="At least 6 characters" required /></label>
             <p class="form-message" id="auth-message" aria-live="polite"></p>
             <button class="primary-button full-width" type="submit" id="auth-submit">Sign in</button>
         </form>
-        <p class="modal-footnote" id="auth-mode-note">Demo mode: sign-in is simulated locally and is not secure authentication.
+        <p class="modal-footnote" id="auth-mode-note">Demo mode: sign-in is simulated locally and is not secure
+            authentication.
         </p>
     </dialog>
 
@@ -220,7 +234,8 @@
         <h2 id="lesson-title">Lesson title</h2>
         <p id="lesson-description" class="intro"></p>
         <div class="video-frame" id="video-frame"></div>
-        <div class="lesson-actions"><span id="lesson-progress-label">Lesson 1</span><button class="primary-button" id="complete-lesson">Mark as completed ✓</button></div>
+        <div class="lesson-actions"><span id="lesson-progress-label">Lesson 1</span><button class="primary-button"
+                id="complete-lesson">Mark as completed ✓</button></div>
         <p class="video-note">Videos are embedded from YouTube. LearnSpace does not host or own these videos.</p>
     </dialog>
 
